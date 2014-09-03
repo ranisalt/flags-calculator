@@ -1,0 +1,63 @@
+# Site settings
+title: OT Flag Calculator
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Open Tibia Flags Calculator is an automatic calculator for Open Tibia server
+  player access and permissions system.
+baseurl: "/flags-calculator" # the subpath of your site, e.g. /blog/
+url: "https://ranisalt.github.io" # the base hostname & protocol for your site
+
+flags:
+  0: Can not use combat
+  1: Can not attack players
+  2: Can not attack monsters
+  3: Can not be attacked
+  4: Can convince all
+  5: Can summon all
+  6: Can illusion all
+  7: Can sense invisibility
+  8: Ignored by monsters
+  9: Can not be battle locked
+  10: Has infinite mana points
+  11: Has infinite soul points
+  12: Can not be exhausted
+  13: Can not use spells
+  14: Can not pickup items
+  15: Can always login
+  16: Can broadcast messages
+  17: Can edit all house rights
+  18: Can not be banished
+  19: Can not be pushed
+  20: Has infinite capacity
+  21: Can push all creatures
+  22: Talk in red in private
+  23: Talk in red in channel
+  24: Talk in orange in help channel
+  25: Can not gain experience points
+  26: Can not gain mana points
+  27: Can not gain health points
+  28: Can not gain skill points
+  29: Has maximum speed
+  30: Can not be added to VIP list
+  31: Can not gain loot (no drop)
+  32: Can talk in red anonymously
+  33: Ignores protection zone
+  34: Skip spell requirements
+  35: Skip equipment requirements
+  36: Can not be muted
+  37: Has infinite premium account
+  38: Can answer rule vioaltions
+# 39: undefined
+  40: Show group instead of vocation
+  41: Has infinite stamina
+  42: Can not push items
+  43: Can not push creatures
+  44: Can file bug reports
+# 45: undefined
+  46: Can not be seen
+  
+
+# Build settings
+markdown: kramdown
+sass:
+  style: :compressed

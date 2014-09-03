@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Your flag value is <strong>0</strong></h1>
+
+  <section class="flag-list">
+    <div>
+      {% for flag in site.flags %}
+        {% capture col %}{% cycle 'duck', 'duck', 'goose' %}{% endcapture %}
+        
+        <p><input type="checkbox" value="{{ flag[0] }}" />{{ flag[1] }}</p>
+        
+        {% if col == 'goose' %}
+      </div>
+      <div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+</div>
+
+<script src="{{ "/js/bigint.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
