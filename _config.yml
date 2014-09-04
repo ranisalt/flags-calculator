@@ -47,13 +47,13 @@ flags:
   36: Can not be muted
   37: Has infinite premium account
   38: Can answer rule vioaltions
-# 39: undefined
+  39: Can reload content
   40: Show group instead of vocation
   41: Has infinite stamina
   42: Can not push items
   43: Can not push creatures
   44: Can file bug reports
-# 45: undefined
+  45: Can see special description
   46: Can not be seen
   
 
