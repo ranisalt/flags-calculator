@@ -1,19 +1,21 @@
 ---
 ---
+pow2 = (exp) ->
+	base = 1
+	base *= 2 while exp-- > 0
+	base
+
 update = ->
-  val = bigInt 0
-  two = bigInt 2
-  els = document.querySelectorAll '.flag-list input'
-  for el in els
-    val = val.add two.pow el.getAttribute 'value' if el.checked
-  document.querySelector('.page-heading strong').innerHTML = val.toString()
-  return
+	val = 0
+	for el in document.querySelectorAll '.flag-list input'
+		val += pow2 el.getAttribute 'value' if el.checked
+	document.querySelector('.page-heading strong').innerHTML = val
+	return
   
 
 document.addEventListener 'DOMContentLoaded', ->
-  els = document.querySelectorAll '.flag-list input'
-  for el in els
-    el.addEventListener 'click', update
-  update()
-  return
-  
+	for el in document.querySelectorAll '.flag-list input'
+		el.addEventListener 'click', update
+	return
+
+update()
