@@ -18,3 +18,10 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 @import "bourbon/bourbon", "neat/neat", "base", "layout";
+
+#flag {
+	border: 1px solid $grey-color;
+	font: inherit;
+	margin: -1px;
+	padding-left: 5px;
+}
