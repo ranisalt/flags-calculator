@@ -5,7 +5,7 @@ pow2 = (exp) ->
 	base *= 2 while exp-- > 0
 	base
 
-update = ->
+recalculate = ->
 	val = 0
 	for el in document.querySelectorAll '.flag-list input'
 		val += pow2 el.getAttribute 'value' if el.checked
@@ -15,7 +15,7 @@ update = ->
 
 document.addEventListener 'DOMContentLoaded', ->
 	for el in document.querySelectorAll '.flag-list input'
-		el.addEventListener 'click', update
+		el.addEventListener 'click', recalculate
 	return
 
-update()
+recalculate()
