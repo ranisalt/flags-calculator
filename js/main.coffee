@@ -9,7 +9,7 @@ recalculate = ->
 	val = 0
 	for el in document.querySelectorAll '.flag-list input'
 		val += pow2 el.getAttribute 'value' if el.checked
-	document.querySelector('.page-heading strong').innerHTML = val
+	document.getElementById('flag').value = val
 	return
   
 
