@@ -54,7 +54,7 @@
     margin-left: 0;
     list-style: none;
 
-    > div > p {
+    > div > div {
         @include span-columns(4);
     
         margin-bottom: $spacing-unit / 3;
