@@ -11,7 +11,7 @@ layout: default
       {% for flag in site.flags %}
         {% capture col %}{% cycle 'duck', 'duck', 'goose' %}{% endcapture %}
         
-        <p><input type="checkbox" value="{{ flag[0] }}" />{{ flag[1] }}</p>
+        <div><label><input type="checkbox" value="{{ flag[0] }}">{{ flag[1] }}</label></div>
         
         {% if col == 'goose' %}
       </div>
