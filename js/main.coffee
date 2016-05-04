@@ -1,24 +1,13 @@
 ---
 ---
-retrieveLang = (lang, cb) ->
-	url = baseUrl + '/lang/' + lang + '.json'
-	try
-		xhr = new window.XMLHttpRequest()
-		xhr.open('GET', url)
-		xhr.timeout = 30
-		xhr.send()
-		xhr.onreadystatechange = ->
-			if xhr.readyState == 4
-				cb null, JSON.parse xhr.responseText
-	catch
-		cb
-
 loadLanguage = (lang) ->
 	if lang == undefined
 		lang = 'en'
 
-	retrieveLang lang, (err, data) ->
-		phrases = data
+	url = baseUrl + '/lang/' + lang + '.json'
+	fetch(url).then((response) ->
+		return response.json()
+	).then((phrases) ->
 		targets = document.querySelectorAll('[data-translate]')
 		for target in targets
 			key = target.getAttribute('data-translate')
@@ -29,6 +18,13 @@ loadLanguage = (lang) ->
 
 		document.getElementsByClassName('home')[0].classList.remove 'hidden'
 		document.getElementsByClassName('loading')[0].classList.add 'hidden'
+		return
+	).catch((ex) ->
+		document.getElementsByClassName('loading')[0].innerHTML = 'Whoops! There was an error.'
+		console.error(ex);
+		return
+	)
+
 	return
 
 pow2 = (exp) ->
