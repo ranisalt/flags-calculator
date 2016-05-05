@@ -50,13 +50,37 @@
 
 .flag-list {
     @include outer-container;
-    
+
     margin-left: 0;
     list-style: none;
 
     > div > div {
         @include span-columns(4);
-    
+
         margin-bottom: $spacing-unit / 3;
     }
+}
+
+.lang-list {
+    @include outer-container;
+
+    hr {
+        margin: 5px 0px;
+    }
+
+    h4 {
+        display: inline;
+    }
+
+    span {
+        cursor: pointer;
+    }
+}
+
+/**
+ * Helpers
+ */
+.hidden {
+    display: none;
+    visibility: hidden;
 }

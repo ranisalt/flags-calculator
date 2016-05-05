@@ -7,57 +7,59 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "/flags-calculator" # the subpath of your site, e.g. /blog/
 url: "https://ranisalt.github.io" # the base hostname & protocol for your site
 
+lang: ['en', 'br']
 flags:
-  0: Can not use combat
-  1: Can not attack players
-  2: Can not attack monsters
-  3: Can not be attacked
-  4: Can convince all
-  5: Can summon all
-  6: Can illusion all
-  7: Can sense invisibility
-  8: Ignored by monsters
-  9: Can not be battle locked
-  10: Has infinite mana points
-  11: Has infinite soul points
-  12: Can not be exhausted
-  13: Can not use spells
-  14: Can not pickup items
-  15: Can always login
-  16: Can broadcast messages
-  17: Can edit all house rights
-  18: Can not be banished
-  19: Can not be pushed
-  20: Has infinite capacity
-  21: Can push all creatures
-  22: Talk in red in private
-  23: Talk in red in channel
-  24: Talk in orange in help channel
-  25: Can not gain experience points
-  26: Can not gain mana points
-  27: Can not gain health points
-  28: Can not gain skill points
-  29: Has maximum speed
-  30: Can not be added to VIP list
-  31: Can not gain loot (no drop)
-  32: Can talk in red anonymously
-  33: Ignores protection zone
-  34: Skip spell requirements
-  35: Skip equipment requirements
-  36: Can not be muted
-  37: Has infinite premium account
-  38: Can answer rule violations
-  39: Can reload content
-  40: Show group instead of vocation
-  41: Has infinite stamina
-  42: Can not push items
-  43: Can not push creatures
-  44: Can file bug reports
-  45: Can see special description
-  46: Can not be seen
-  
+  0: CannotUseCombat
+  1: CannotAttackPlayer
+  2: CannotAttackMonster
+  3: CannotBeAttacked
+  4: CanConvinceAll
+  5: CanSummonAll
+  6: CanIllusionAll
+  7: CanSenseInvisibility
+  8: IgnoredByMonsters
+  9: NotGainInFight
+  10: HasInfiniteMana
+  11: HasInfiniteSoul
+  12: HasNoExhaustion
+  13: CannotUseSpells
+  14: CannotPickupItem
+  15: CanAlwaysLogin
+  16: CanBroadcast
+  17: CanEditHouses
+  18: CannotBeBanned
+  19: CannotBePushed
+  20: HasInfiniteCapacity
+  21: CanPushAllCreatures
+  22: CanTalkRedPrivate
+  23: CanTalkRedChannel
+  24: TalkOrangeHelpChannel
+  25: NotGainExperience
+  26: NotGainMana
+  27: NotGainHealth
+  28: NotGainSkill
+  29: SetMaxSpeed
+  30: SpecialVIP
+  31: NotGenerateLoot
+  32: CanTalkRedChannelAnonymous
+  33: IgnoreProtectionZone
+  34: IgnoreSpellCheck
+  35: IgnoreEquipCheck
+  36: CannotBeMuted
+  37: IsAlwaysPremium
+  38: CanAnswerRuleViolations
+  39: Unassigned
+  40: ShowGroupNameInsteadOfVocation
+  41: HasInfiniteStamina
+  42: CannotMoveItems
+  43: CannotMoveCreatures
+  44: CanReportBugs
+  45: Unassigned
+  46: CannotBeSeen
 
 # Build settings
 markdown: kramdown
 sass:
   style: :compressed
+gems:
+ - jekyll-coffeescript

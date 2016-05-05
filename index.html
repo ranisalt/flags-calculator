@@ -2,17 +2,17 @@
 layout: default
 ---
 
-<div class="home">
+<div class="home hidden">
 
-  <h1 class="page-heading">Your flag value is <input id="flag" type="text" value="0" /></h1>
+  <h1 class="page-heading"><span data-translate="CurrentFlag"></span> <input id="flag" type="text" value="0" /></h1>
 
   <section class="flag-list">
-    <div>
+    <div class="content">
       {% for flag in site.flags %}
         {% capture col %}{% cycle 'duck', 'duck', 'goose' %}{% endcapture %}
-        
-        <div><label><input type="checkbox" value="{{ flag[0] }}">{{ flag[1] }}</label></div>
-        
+
+        <div><input type="checkbox" value="{{ flag[0] }}"><span data-translate="{{ flag[1] }}"></span></div>
+
         {% if col == 'goose' %}
       </div>
       <div>
@@ -21,6 +21,19 @@ layout: default
     </div>
   </section>
 
+  <section class="lang-list">
+      <hr>
+      <h4>Languages Avaliables:</h4>
+        {% for lang in site.lang %}
+          <span data-lang="{{ lang }}"><img src="{{ "/img/"  | prepend: site.baseurl }}{{ lang }}.png"></span>
+        {% endfor %}
+    </div>
+  </section>
+
+  <section class="loading">
+    <p>Loading ...</p>
+  </section>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.min.js"></script>
 <script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
